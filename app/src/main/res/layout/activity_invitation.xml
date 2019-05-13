@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_invitation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--滚动条-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_dzkd_banner">
+
+                    <com.dzkandian.common.widget.autoviewpager.AutoScrollViewPager
+                        android:id="@+id/autoScrollViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/autoScrollIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+
+
+                <!--成功邀请的徒弟-->
+                <RelativeLayout
+                    android:id="@+id/ll_invite_chenggong"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_option_press"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/mine_invitation_apprenticeincome_text"
+                        android:text="@string/invite_disciple" />
+
+                    <TextView
+                        android:id="@+id/tv_invite_inviteCount"
+                        style="@style/mine_invitation_apprenticeincome_righttext"
+                        android:text="0人"
+                        android:textColor="@color/color_text_tip" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+
+                <!--徒弟提供的总收益-->
+                <RelativeLayout
+                    android:id="@+id/ll_invite_zongshouyi"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/selector_option_press"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/mine_invitation_apprenticeincome_text"
+                        android:text="@string/invite_earnings" />
+
+                    <TextView
+                        android:id="@+id/tv_invite_totalIncome"
+                        style="@style/mine_invitation_apprenticeincome_righttext"
+                        android:text="0金币"
+                        android:textColor="@color/color_text_red" />
+
+                </RelativeLayout>
+
+                <!--邀请规则-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        style="@style/mine_invitation_first_title"
+                        android:text="@string/invite_rules" />
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/color_text_red" />
+                </LinearLayout>
+
+                <!--邀请收益-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+
+                    <TextView
+                        style="@style/mine_invitation_second_title"
+                        android:text="@string/invite_income" />
+
+                    <TextView
+                        android:id="@+id/tv_invite_inviteProfitText"
+                        style="@style/mine_invitation_second_describe"
+                        android:text="邀请收益" />
+
+                </LinearLayout>
+
+                <!--提成收益-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        style="@style/mine_invitation_second_title"
+                        android:text="@string/invite_yield" />
+
+
+                    <TextView
+                        android:id="@+id/tv_invite_addedProfitText"
+                        style="@style/mine_invitation_second_describe"
+                        android:text="提成收益" />
+
+                </LinearLayout>
+
+                <!--奖励发放规则-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        style="@style/mine_invitation_first_title"
+                        android:text="奖励发放规则" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/color_text_red" />
+
+                </LinearLayout>
+
+                <!--7次发放如下-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:background="@color/color_text_red"
+                        android:gravity="center"
+                        android:text="@string/invite_7ci"
+                        android:textColor="@color/pressed_default"
+                        android:textSize="16dp" />
+
+                    <!--次数-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_red"
+                            android:text="次数" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_red"
+                            android:text="金币数" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第一次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_1" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule1"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第二次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_2" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule2"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第三次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_3" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule3"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第四次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_4" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule4"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第五次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_5" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule5"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第六次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_6" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule6"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+
+                    <!--第七次-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="@string/invite_7" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+
+                        <TextView
+                            android:id="@+id/tv_rewardRule7"
+                            style="@style/mine_invitation_frequency_black"
+                            android:text="0" />
+
+                        <View
+                            style="@style/mine_invitation_vertical_line" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/mine_invitation_transverse_line" />
+                </LinearLayout>
+
+                <!--奖励发放规则描述-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_invite_rewardRuleText"
+                        style="@style/mine_invitation_second_describe"
+                        android:text="奖励发放规则描述" />
+                </LinearLayout>
+
+                <!--面对面收徒-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pressed_default"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        style="@style/mine_invitation_first_title"
+                        android:text="面对面收徒" />
+
+                    <View
+                        android:layout_width="88dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/color_text_red" />
+
+                </LinearLayout>
+
+                <!--二维码图片-->
+                <ImageView
+                    android:id="@+id/iv_invite_RQcodeImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_dzkd_short_5"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--立即邀请按钮-->
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_invite_shadow"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/b_invite"
+            style="@style/style_invite"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_invite_button"
+            android:text="@string/invite" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_error_network"
+            android:gravity="center"
+            android:text="@string/error_network" />
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_btn_click_shape"
+            android:text="@string/btn_reload"
+            android:textColor="@color/color_text_white"
+            android:textSize="@dimen/t14" />
+
+    </LinearLayout>
+
+</LinearLayout>

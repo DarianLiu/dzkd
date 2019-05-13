@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  有  礼物箱的天数签到-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_task_sign_giftnormal" android:state_selected="false" />
+    <item android:drawable="@drawable/shape_task_sign_selected" android:state_selected="true"/>
+</selector>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="BaseThem">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="SlideslipTheme" parent="SlideBaseTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:windowTranslucentNavigation">false</item>-->
+    </style>
+
+    <style name="ShortVideoSlideTheme" parent="SlideBaseTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置状态栏为透明-->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--导航栏不透明-->
+        <!--<item name="android:windowTranslucentNavigation">false</item>-->
+        <!--设置状态栏为主题色-->
+    </style>
+
+</resources>

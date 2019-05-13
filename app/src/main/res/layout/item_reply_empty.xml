@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_error_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_error_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="52dp"
+        android:gravity="center"
+        android:drawableTop="@drawable/icon_error_empty_reply"
+        android:text="暂无回复，快来说说您的看法吧~"
+        android:textColor="@color/color_c999999"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+    <!--兑换金额-->
+
+    <TextView
+        android:id="@+id/tv_cash_itemrmb1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@drawable/selector_cash_text"
+        android:textSize="@dimen/t18" />
+
+    <!--剩余份数-->
+    <TextView
+        android:id="@+id/tv_cash_itemsurplus"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingStart="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:text="剩余xxxx份"
+        android:textColor="@color/color_text_tip"
+        android:textSize="@dimen/t10" />
+
+</LinearLayout>

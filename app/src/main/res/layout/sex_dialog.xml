@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sex_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_popupwindow_bg"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/rb_boy"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/p50"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_sex"
+        android:drawablePadding="@dimen/p24"
+        android:drawableStart="@drawable/selector_sex"
+        android:minWidth="@dimen/p260"
+        android:paddingLeft="@dimen/p24"
+        android:paddingStart="@dimen/p24"
+        android:text="男"
+        android:textSize="@dimen/t18" />
+
+    <RadioButton
+        android:id="@+id/rb_girl"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/p50"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_sex"
+        android:drawablePadding="@dimen/p24"
+        android:drawableStart="@drawable/selector_sex"
+        android:minWidth="@dimen/p260"
+        android:paddingLeft="@dimen/p24"
+        android:paddingStart="@dimen/p24"
+        android:text="女"
+        android:textSize="@dimen/t18" />
+
+</RadioGroup>

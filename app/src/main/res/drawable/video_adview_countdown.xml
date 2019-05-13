@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--视频详情页播放完成横版计时广告的  跳过  按钮-->
+    <corners android:radius="50dp"/>
+    <solid android:color="#4D000000"/>
+</shape>

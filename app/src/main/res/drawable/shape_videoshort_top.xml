@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--小视频收藏列表的头部阴影-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--十六进制颜色带透明；添加渐变-->
+    <gradient
+        android:angle="90"
+        android:startColor="#00fcfcfc"
+        android:endColor="#df000000"/>
+</shape>

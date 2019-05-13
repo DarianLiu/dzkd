@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <com.dzkandian.common.widget.OptionView
+        android:id="@+id/ov_system_set_update"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:option_background="@drawable/selector_option_press"
+        app:option_title_text="@string/system_set_update" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <com.dzkandian.common.widget.OptionView
+        android:id="@+id/ov_system_set_clean"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:option_background="@drawable/selector_option_press"
+        app:option_title_text="@string/system_set_clean" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="金币音效"
+            android:textColor="@color/cent"
+            android:textSize="@dimen/t16" />
+
+        <ToggleButton
+            android:id="@+id/tb_system_set_sound"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:button="@drawable/selector_togglebutton"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="通知栏消息"
+            android:textColor="@color/cent"
+            android:textSize="@dimen/t16" />
+
+        <ToggleButton
+            android:id="@+id/tb_system_set_push"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:button="@drawable/selector_togglebutton"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="字体大小"
+            android:textColor="@color/cent"
+            android:textSize="@dimen/t16" />
+
+        <com.sevenheaven.segmentcontrol.SegmentControl
+            android:id="@+id/sc_system_set_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:textSize="@dimen/t14"
+            app:boundWidth="1dp"
+            app:cornerRadius="2dp"
+            app:horizonGap="12dp"
+            app:normalColor="@color/color_text_white"
+            app:selectedColor="@color/red_select"
+            app:separatorWidth="1dp"
+            app:texts="小|中|大"
+            app:verticalGap="6dp" />
+
+    </RelativeLayout>
+
+    <com.dzkandian.common.widget.OptionView
+        android:id="@+id/ov_system_set_protocol"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        app:option_background="@drawable/selector_option_press"
+        app:option_title_text="@string/system_set_protocol" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <com.dzkandian.common.widget.OptionView
+        android:id="@+id/ov_system_set_about"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:option_background="@drawable/selector_option_press"
+        app:option_title_text="@string/system_set_about" />
+
+</LinearLayout>

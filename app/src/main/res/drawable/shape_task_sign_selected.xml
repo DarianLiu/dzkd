@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  已签到的  天数-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <corners android:radius="360dp" />
+            <solid android:color="#ffe68b" />
+            <!--#FFE68B-->
+        </shape>
+    </item>
+
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+
+        <shape>
+            <corners android:radius="360dp" />
+            <solid android:color="#ffbf00" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/icon_taskcenter_hook"
+        android:bottom="6dp"
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp"/>
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  无  礼物箱的时候 未签到的-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <corners android:radius="360dp" />
+            <solid android:color="#B00000" />
+        </shape>
+    </item>
+</layer-list>

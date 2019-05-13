@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kk.taurus.playerbase.widget.BaseVideoView
+            android:id="@+id/base_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000000" />
+
+        <!--视频详情页播放完成横版计时广告相关-->
+        <RelativeLayout
+            android:id="@+id/rlayout_adview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone">
+
+            <!--广告图片-->
+            <ImageView
+                android:id="@+id/iv_adview_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon_dzkd_place" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/video_adview_adbotton"
+                android:text="广告"
+                android:textSize="10sp"
+                android:textColor="@color/color_FFFFFF"/>
+
+            <!--广告倒计时-->
+            <TextView
+                android:id="@+id/tv_adview_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/video_adview_countdown"
+                android:text="跳过 3"
+                android:textSize="12sp"
+                android:textColor="@color/color_FFFFFF"/>
+
+            <!--广告标题-->
+            <TextView
+                android:id="@+id/tv_adview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#4D000000"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="原生广告标题"
+                android:textSize="20sp"
+                android:textColor="@color/color_FFFFFF"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fl_video">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+                <include layout="@layout/include_refresh_recycler" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <!-- 弹幕 -->
+                    <com.dzkandian.common.widget.barrageview.DanmuContainerView
+                        android:id="@+id/danmuContainerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:layout_above="@+id/fl_video_comment"
+                        android:layout_marginBottom="5dp" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_video_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:visibility="gone">
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <com.dzkandian.common.widget.arcprogress.AnswerChartView
+                    android:id="@+id/tasks_view"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:circleColor="@color/white"
+                    app:innerringColor="@color/color_progress_ring_going"
+                    app:outringColor="@color/color_progress_out_ring"
+                    app:progressWidth="3dp"
+                    app:radiusView="20dp"
+                    app:strokeWidth="3dp"
+                    app:textSize="32sp" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_reward_video" />
+
+            <TextView
+                android:id="@+id/tv_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="1000"
+                android:textColor="@color/color_reward"
+                android:textSize="21sp" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <com.dzkandian.common.widget.barrageview.FlutteringLayout
+        android:id="@+id/flutteringLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scale="1.2" />
+
+</RelativeLayout>

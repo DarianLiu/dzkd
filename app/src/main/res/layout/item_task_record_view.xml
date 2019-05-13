@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="@dimen/p40"
+        android:layout_height="@dimen/p40"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/p14"
+        android:layout_marginStart="@dimen/p14"
+        android:background="@drawable/shape_item_task_record_bg"
+        android:gravity="center"
+        android:text="@string/mine_task_record_income"
+        style="@style/style_txt_white_little" />
+
+    <TextView
+        android:id="@+id/mine_task_record_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_tip"
+        android:layout_marginLeft="@dimen/p10"
+        android:layout_marginStart="@dimen/p10"
+        android:layout_toEndOf="@+id/tv_tip"
+        android:layout_toRightOf="@+id/tv_tip"
+        android:text="@string/mine_task_record_num"
+        style="@style/style_txt_black_two_normal" />
+
+    <TextView
+        android:id="@+id/mine_task_record_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_tip"
+        android:layout_marginLeft="@dimen/p10"
+        android:layout_marginStart="@dimen/p10"
+        android:layout_marginTop="@dimen/p4"
+        android:layout_toEndOf="@+id/tv_tip"
+        android:layout_toRightOf="@+id/tv_tip"
+        android:text="@string/mine_task_record_num"
+        style="@style/style_txt_black_nine_tiny"/>
+
+    <TextView
+        android:id="@+id/mine_task_record_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/p10"
+        android:layout_marginRight="@dimen/p14"
+        android:text="@string/mine_task_record_date"
+        style="@style/style_txt_black_nine_tiny"/>
+
+</RelativeLayout>

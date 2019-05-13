@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <!--支付宝账户-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_alipay_txet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center"
+            android:text="@string/ALiPay_code" />
+
+        <EditText
+            android:id="@+id/et_managezhifibao_account"
+            style="@style/style_alipay_edittext"
+            android:layout_width="0dp"
+            android:layout_marginRight="15dp"
+            android:maxLength="64"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <!--支付宝姓名-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_alipay_txet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center"
+            android:text="@string/ALiPay_name" />
+
+        <EditText
+            android:id="@+id/et_managezhifubao_name"
+            style="@style/style_alipay_edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:maxLength="64"
+            android:maxLines="1"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+    <!--支付宝授权-->
+    <LinearLayout
+        android:id="@+id/ll_alipay_power"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_wechatpay_txet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center"
+            android:text="@string/AliPay_power" />
+
+        <TextView
+            android:id="@+id/tv_alipay_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/color_edit_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_alipay_tou_xiang"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_task_arrow_right" />
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <!--绑定-->
+    <Button
+        android:id="@+id/b_managezhifubao"
+        style="@style/style_alipay_button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="44dp"
+        android:enabled="false"
+        android:text="@string/ALiPay_button" />
+
+    <!--温馨提示-->
+    <TextView
+        style="@style/style_weChat_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="@string/ALiPay_prompt" />
+
+    <TextView
+        style="@style/style_weChat_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="@string/ALiPay_prompt_text" />
+
+</LinearLayout>

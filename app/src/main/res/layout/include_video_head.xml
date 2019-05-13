@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_video_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="7dp"
+        android:text="标题大本营"
+        android:textColor="@color/color_text_title"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_video_tui_jian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_video_background"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="相关推荐"
+        android:textColor="@color/color_text_tip"
+        android:textSize="13sp" />
+
+</LinearLayout>

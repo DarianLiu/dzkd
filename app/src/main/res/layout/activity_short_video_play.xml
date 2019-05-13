@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_refresh_recycler" />
+
+
+    <FrameLayout
+        android:id="@+id/express_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_text" />
+
+
+    <ImageView
+        android:id="@+id/express_ad_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/express_ad_container"
+        android:src="@drawable/icon_cancel"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_reward_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_reward_video" />
+
+        <TextView
+            android:id="@+id/tv_reward_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color_reward"
+            android:textSize="21sp" />
+    </FrameLayout>
+
+    <!-- 弹幕 -->
+    <com.dzkandian.common.widget.barrageview.DanmuContainerView
+        android:id="@+id/danmuContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:id="@+id/fl_short_video_comment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.dzkandian.common.widget.arcprogress.AnswerChartView
+        android:id="@+id/tasks_view"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        app:circleColor="@color/white"
+        app:innerringColor="@color/color_progress_ring_going"
+        app:outringColor="@color/color_progress_out_ring"
+        app:progressWidth="3dp"
+        app:radiusView="20dp"
+        app:strokeWidth="3dp" />
+
+    <com.dzkandian.common.widget.barrageview.FlutteringLayout
+        android:id="@+id/flutteringLayout"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:scale="1.2" />
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--任务中心顶部签到的金币普通字体样式  -->
+ <style name="task_center_sign_normal_txt">
+     <item name="android:layout_width">@dimen/p36</item>
+     <item name="android:layout_height">@dimen/p36</item>
+     <item name="android:background">@drawable/selector_task_sign_bg</item>
+     <item name="android:gravity">center</item>
+     <item name="android:lineSpacingMultiplier">1.1</item>
+     <item name="android:textColor">@color/color_text_white</item>
+     <item name="android:textSize">@dimen/p12</item>
+ </style>
+
+    <!--任务中心顶部签到的金币大号字体样式-->
+    <style name="task_center_sign_big_txt" parent="task_center_sign_normal_txt">
+    <item name="android:layout_width">@dimen/p42</item>
+    <item name="android:layout_height">@dimen/p42</item>
+    <item name="android:background">@drawable/selector_task_sign_giftbg</item>
+  </style>
+
+    <!--任务中心顶部签到的时间普通字体样式-->
+    <style name="task_center_time_normal_txt">
+        <item name= "android:layout_width">@dimen/p36</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/p5</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/t10</item>
+    </style>
+
+    <!--任务中心顶部签到的时间大号字体样式-->
+    <style name="task_center_time_big_txt" parent="task_center_time_normal_txt">
+        <item name="android:layout_width">@dimen/p42</item>
+    </style>
+
+    <!--签到按钮-->
+    <style name="task_center_sign_btn">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_sign_btn_background</item>
+        <item name="android:textSize">@dimen/t20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--任务列表图片-->
+    <style name="task_center_task_img">
+        <item name="android:layout_width">@dimen/p30</item>
+        <item name="android:layout_height">@dimen/p30</item>
+        <item name="android:layout_marginLeft">@dimen/p10</item>
+        <item name="android:layout_marginRight">@dimen/p10</item>
+        <item name="android:layout_marginTop">@dimen/p10</item>
+    </style>
+
+    <!--任务列表金币数量-->
+    <style name="task_center_task_gold_txt">
+        <item name="android:drawablePadding">@dimen/p5</item>
+        <item name="android:drawableStart">@drawable/icon_taskcenter_gold</item>
+        <item name="android:textColor">@color/task_item_coin</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--任务列表红色框-->
+    <style name="task_center_task_red_btn">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">@dimen/p28</item>
+        <item name="android:layout_marginRight">@dimen/p10</item>
+        <item name="android:textColor">@color/color_btn_text_task</item>
+        <item name="android:textSize">@dimen/t14</item>
+        <item name="android:background">@drawable/shape_btn_normal</item>
+    </style>
+
+    <!--任务列表扩展内容-->
+    <style name="task_center_task_expand_txt">
+        <item name="android:layout_marginEnd">120dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_text_tip</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+</resources>

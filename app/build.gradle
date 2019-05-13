@@ -1,0 +1,397 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'org.greenrobot.greendao' //greenao插件
+
+MobSDK {
+    appKey '24cdcb079406a'
+    appSecret 'dd75608b8829c3fb332fab8b21b1fc56'
+    ShareSDK {
+        version "3.2.1"
+        devInfo {
+            QQ {
+                id 1
+                sortId 1
+                appId "1106900489"
+                appKey "k9MYCNxTU0Uoj0o8"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            QZone {
+                id 2
+                sortId 2
+                appId "1106900489"
+                appKey "k9MYCNxTU0Uoj0o8"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            Wechat {
+                id 3
+                sortId 3
+                appId "wx56bca4b9873b6694"
+                appSecret "32fea59714c67636362d1a9eb0a1ba4d"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            WechatMoments {
+                id 4
+                sortId 4
+                appId "wx56bca4b9873b6694"
+                appSecret "32fea59714c67636362d1a9eb0a1ba4d"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            SinaWeibo {
+                id 5
+                sortId 5
+                appKey "2739482589"
+                appSecret "d615074607b6cc9dc83085c83c9511b7"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+        }
+    }
+}
+
+android {
+
+    //greendao配置
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 4
+        daoPackage 'com.dzkandian.db'
+        targetGenDir 'src/main/java'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'yunrui'
+            keyPassword 'yunrui859'
+            storeFile file('C:/QianMing/dazhongkandian.jks')
+            storePassword 'yrkj6688'
+        }
+        default_sign {
+            keyAlias 'yunrui'
+            keyPassword 'yunrui859'
+            storeFile file('C:/QianMing/dazhongkandian.jks')
+            storePassword 'yrkj6688'
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.dzkandian"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        flavorDimensions "versionCode"
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+
+        multiDexEnabled true
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+
+        ndk {
+//            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'  //ijkplayer大  25MB
+//            abiFilters 'armeabi', 'armeabi-v7a'                                //ijkplayer小  15MB
+//            abiFilters 'armeabi', 'armeabi-v7a', 'x86'                         //exoplayer    14MB
+            abiFilters 'armeabi', 'armeabi-v7a'                                //exoplayer    12MB
+//            playerLibrary 'armeabi', 'armeabi-v7a'                               //playerLibrary  11.4MB
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "3ada9c9d0e24600c8cf4f949", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    //测试框架、避免编译时候License的冲突
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.default_sign
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+
+    //jni配置
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    //多渠道打包支持百度手机助手
+    productFlavors {
+        ClosedBeta {}               //封测
+        Official_yr {}              //官网
+        Official_gx {}              //推送更新
+        Official_st {}              //邀请收徒
+        Official_dx {}              //短信召回包
+        Official_hd {}              //官网活动包
+        Baidu {}                    //百度手机助手
+        Tencent {}                  //腾讯应用宝
+        Anzhi {}                    //安智市场
+        _360 {}                     //360移动助手
+        Mi {}                       //小米商店
+        Lenovo {}                   //联想乐商店
+        Oppo {}                     //oppo
+        Vivo {}                     //vivo
+        Ginoee {}                   //金立
+        Sogou {}                    //搜狗助手
+        Wo {}                       //联通沃商店
+        AppChina {}                 //应用汇开发者
+        Smartisan {}                //锤子应用商店
+        ZMon {}                     //冒泡堂
+        Le {}                       //乐视应用商店
+        MuMaYi {}                   //木蚂蚁
+        Eoe {}                      //优亿
+//        LvAn {}                     //绿安
+//        LvCa {}                     //绿茶软件
+        ALi {}                      //阿里应用
+        MeiZu {}                    //魅族商店
+//        DownXia {}                  //当下软件应用
+        HuaWei {}                   //华为
+        SEO {}                      //SEO推广
+//        Baidu_search {}             //百度搜索
+//        Baidu_infor {}              //百度信息
+//        Wifi {}                     //wifi万能钥匙
+//        Bcat {}                     //变现猫
+//        Lt {}                       //来推
+//        Lga {}                      //链咖
+        M_WanPu {}                  //万普
+        M_QuanMeng {}               //泉盟
+        M_quanmeng2 {}              //泉盟
+        M_quanmeng3 {}              //泉盟
+//        M_XSZ {}                    //学生赚
+//        M_XYZQ {}                   //小鱼赚钱
+//        M_Ym {}                     //米赚
+//        Ttgz {}                     //天天告之
+        CS_NO1 {}                   //测试1
+        CS_NO2 {}                   //测试2
+        CS_NO3 {}                   //测试3
+//        Ta {}                       //推啊
+        M_Xinke {}                  //薪客
+//        M_Zhongrenbang {}           //众人帮
+//        M_huitoutiao {}             //惠头条
+        M_youmi {}                  //有米
+//        M_taoxinwen {}              //淘新闻
+//        M_HBSK {}                   //红包试客
+//        M_MRZD {}                   //每日赚点
+        M_51ZQ {}                   //51赚钱
+        M_diancai {}                //点财
+        M_DDQW {}                   //豆豆趣玩
+        M_xzzq {}                   //小啄赚钱
+//        M_XianWan {}                //闲玩
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //穿山甲联盟广告
+    compile(name: 'open_ad_sdk', ext: 'aar')
+    compile(name: 'android-gif-drawable-1.2.6', ext: 'aar')
+    compile(name: 'circleimageview-2.2.0', ext: 'aar')
+    compile(name: 'LayoutManagerGroup', ext: 'aar')
+    compile files('libs/android-query-full.0.26.7.jar')
+    compile files('libs/mysdk.jar')
+
+    // Espresso 相关的引用
+//    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+//    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2'){
+//        exclude group: 'javax.inject'
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    }
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+////    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+//test
+    testImplementation rootProject.ext.dependencies["junit"]
+
+    //support
+    implementation(rootProject.ext.dependencies["design"])
+
+    //tools
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+
+    //view
+    implementation(rootProject.ext.dependencies["butterknife"]) {
+        exclude module: 'support-annotations'
+    }
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    implementation rootProject.ext.dependencies["smartRefreshLayout"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation('me.jessyan:arms:2.4.1') {
+        exclude module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+    }
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    implementation project(':xtablayoutlibrary')
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //        implementation project(':ads')//广告计时SDK，需要打架包时放开
+
+    //微信SDK
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //    implementation files('libs/MobCommons-2018.0418.1102.jar')
+
+    //    implementation files('libs/MobTools-2018.0419.1211.jar')
+
+    //    implementation files('libs/ShareSDK-Core-3.1.4.jar')
+
+    //    implementation files('libs/ShareSDK-QQ-3.1.4.jar')
+
+    //    implementation files('libs/ShareSDK-QZone-3.1.4.jar')
+
+    //    implementation files('libs/ShareSDK-Wechat-3.1.4.jar')
+
+    //    implementation files('libs/ShareSDK-Wechat-Core-3.1.4.jar')
+
+    //    implementation files('libs/ShareSDK-Wechat-Moments-3.1.4.jar')
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //    implementation 'com.android.support:support-annotations:28.0.0-alpha1'
+
+    //umeng
+    implementation 'com.umeng.umsdk:common:1.5.4'
+    implementation 'com.umeng.umsdk:analytics:7.5.4'
+
+    //    compile 'com.umeng.sdk:debug:1.0.0'//上线前要去掉 避免Umeng打印不必要的日志
+
+    //新视频播放器
+    implementation 'cn.jiguang.sdk:jpush:3.1.3'
+
+    // 此处以JPush
+    implementation 'cn.jiguang.sdk:jcore:1.2.1'
+
+    //WebScoket端口监听
+    implementation 'org.nanohttpd:nanohttpd-websocket:2.3.1'
+    implementation 'com.jude:swipebackhelper:3.1.2'
+
+    //支付宝
+    implementation files('libs/alipaySdk-20180601.jar')
+
+    //红包雨动画；
+    implementation 'com.airbnb.android:lottie:2.6.1'
+
+    //腾讯广告联盟
+    implementation files('libs/GDTUnionSDK.4.19.574.min.jar')
+
+    //    implementation files('libs/GDTUnionSDK.TBS.4.19.574.min.jar')
+
+    //百度广告
+    implementation files('libs/Baidu_MobAds_SDK.jar')
+
+    //    implementation 'com.googlecode.android-query:android-query:0.25.9'
+
+    /*SegmentControl*/
+    implementation 'com.7heaven.widgets:segmentcontrol:1.17'
+
+    //    implementation 'com.googlecode.android-query:android-query:0.25.9'
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    //greendao数据库
+
+    //    implementation 'net.zetetic:android-database-sqlcipher:3.5.7@aar'//数据库加密
+//    implementation 'com.facebook.stetho:stetho:1.5.0'//数据库调试
+
+    //appupdate的OKhttpUtils
+    implementation 'com.qianwen:okhttp-utils:3.8.0'
+
+    //    implementation 'com.kk.taurus.playerbase:playerbase:3.3.2'
+    implementation 'cn.jiajunhui:exoplayer:332_r251_001'
+    implementation 'com.daasuu:EasingInterpolator:1.0.0'
+
+    //点赞动画的插值器
+
+    //该依赖包含ijkplayer解码和MediaPlayer解码
+
+    //    implementation 'cn.jiajunhui:ijkplayer:332_088_001'
+
+    //    ijk官方的解码库依赖，较少格式版本且不支持HTTPS。
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
+}

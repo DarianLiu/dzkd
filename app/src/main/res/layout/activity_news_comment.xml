@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+    android:id="@+id/view_statue"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/padding_top"
+    android:background="@color/colorPrimary" />
+
+
+    <include layout="@layout/include_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_FFFFFF"
+        android:fitsSystemWindows="true">
+
+        <include
+            layout="@layout/include_refresh_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="52dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_comment_send"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_menu_background"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_weight="8"
+                android:background="@drawable/shape_comment_details"
+                android:hint="@string/hint_news_comment"
+                android:maxLength="120"
+                android:maxLines="3"
+                android:textColor="#333333"
+                android:textColorHint="#cccccc"
+                android:textCursorDrawable="@drawable/shape_edit_text_cursor"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bt_send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@null"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:scaleType="centerInside"
+                android:text="发布"
+                android:textColor="@color/color_text_tip"
+                android:textSize="@dimen/t18" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_active_time"
+        android:text=""
+        style="@style/mine_message_center_active_time_txt"
+        android:layout_marginTop="@dimen/p10"
+        android:layout_marginBottom="@dimen/p10"
+        />
+
+    <LinearLayout
+        android:id="@+id/active_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_task_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_active_type"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:text="活动"
+                style="@style/mine_message_center_active_icon_txt"
+               />
+
+
+            <TextView
+                android:id="@+id/tv_active_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="活动名称"
+                style="@style/style_txt_black_two_normal" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_active"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+        <TextView
+            android:id="@+id/tv_active_describe"
+            android:text="活动简介"
+            style="@style/mine_message_center_active_brief_txt"
+            android:layout_marginRight="@dimen/p10"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/p10"
+            android:layout_marginRight="@dimen/p10"
+            android:background="@color/line_view_color" />
+
+        <TextView
+            android:id="@+id/tv_active_link"
+            android:text="立即查看"
+            style="@style/mine_message_center_active_instant_txt"
+             />
+    </LinearLayout>
+
+
+</LinearLayout>

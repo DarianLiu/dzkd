@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/iv_comment_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/icon_mine_head" />
+
+    <RelativeLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/p16"
+        android:layout_toRightOf="@+id/iv_comment_head"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/app_name"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/t14" />
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_comment_name"
+            android:layout_marginTop="9dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/black33"
+            android:lineSpacingMultiplier="1.1"
+            android:textSize="@dimen/t16"
+            android:text="提起打工皇帝，很多人首先想到他的名字应该是朱立生，刘大力，李飞翔，他们动不动上千万的年薪"
+            android:maxLength="120"/>
+
+
+        <ImageView
+            android:id="@+id/iv_comment_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_comment_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_message_article_top" />
+
+        <LinearLayout
+            android:id="@+id/ll_comment_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_comment_triangle"
+            android:background="@color/color_F2F2F2"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/p10"
+            android:paddingTop="@dimen/p10"
+            android:paddingRight="@dimen/p10"
+            android:paddingBottom="@dimen/p10"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_comment_reply_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="大众"
+                android:textSize="@dimen/t16"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_comment_reply_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="看点"
+                android:textSize="@dimen/t16"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_comment_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/p12"
+                android:includeFontPadding="false"
+                android:text="查看全部回复"
+                android:textColor="@color/color_C70000"
+                android:textSize="17sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/ll_comment_reply">
+
+            <TextView
+                android:id="@+id/tv_comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="2018-02-22"
+                android:textColor="@color/color_c999999"
+                android:textSize="@dimen/t14" />
+
+
+                <com.dzkandian.common.widget.likeview.ShineButton
+                    android:id="@+id/sb_thumbs"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_toLeftOf="@+id/tv_thumbs_count"
+                    android:layout_marginRight="@dimen/p4"
+                    android:layout_centerVertical="true"
+                    app:btn_color="@color/color_c999999"
+                    app:btn_fill_color="@color/color_C70000"
+                    app:allow_random_color="true"
+                    app:siShape="@drawable/icon_black_heart" />
+
+                <TextView
+                    android:id="@+id/tv_thumbs_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:layout_toLeftOf="@+id/tv_reply_count"
+                    android:layout_marginRight="@dimen/p6"
+                    android:text="33"
+                    android:textColor="@color/color_c999999"
+                    android:textSize="@dimen/t14"
+                    android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_reply_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_comment_reply"
+                android:drawablePadding="4dp"
+                android:includeFontPadding="false"
+                android:text="33"
+                android:textColor="@color/color_c999999"
+                android:textSize="@dimen/t14"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_thumbs_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_comment_reply"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="46dp"
+            android:text="+1"
+            android:textColor="@color/color_C70000"
+            android:textSize="@dimen/t12"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

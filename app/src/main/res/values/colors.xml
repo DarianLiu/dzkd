@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C70000</color>
+    <color name="colorPrimaryDark">#C70000</color>
+    <color name="colorAccent">#C70000</color>
+    <color name="default_background">#F2F2F2</color>
+    <color name="transparent">#00000000</color>
+
+    <!--底部菜单颜色-->
+    <color name="color_menu_background">#ffffff</color>
+    <color name="color_menu_text_normal">#999999</color>
+    <color name="color_menu_text_selected">#C70000</color>
+
+    <!--刷新控件颜色-->
+    <color name="color_refresh_primary">#bc3431</color><!--强调颜色-->
+    <color name="color_refresh_accent">#ffffff</color><!--主题颜色-->
+
+    <!--TabLayout颜色-->
+    <color name="color_tabLayout_background">#FFFFFF</color>
+    <color name="color_tabLayout_text_normal">#222222</color>
+    <color name="color_tabLayout_text_selected">#C70000</color>
+
+    <!--视频播放背景色-->
+    <color name="color_video_background">#F2F2F2</color>
+
+    <!--线条颜色-->
+    <color name="line_color">#dddddd</color>
+
+    <!--资讯相关颜色-->
+    <color name="color_news_title">#222222</color>
+    <color name="color_news_source">#999999</color>
+    <color name="color_news_date">#999999</color>
+
+    <!--标题背景色，字体颜色-->
+    <color name="color_title_background">#C70000</color>
+    <color name="color_title_text">#ffffff</color>
+    <color name="color_close_text">#b80000</color>
+
+    <!--奖励的字体颜色-->
+    <color name="color_reward">#EA0707</color>
+
+    <color name="color_text_title">#222222</color>
+    <color name="color_text_tip">#999999</color>
+    <color name="color_text_red">#C70000</color>
+    <color name="color_text_white">#ffffff</color>
+
+    <color name="color_text_complete">#9e9e9e</color>
+
+    <color name="color_text_user">#469CE7</color>
+
+    <!--错误提示文字颜色-->
+    <color name="color_text_error">#ff717171</color>
+
+    <!--edit字体颜色-->
+    <color name="color_hint_text">#999999</color>
+    <color name="color_edit_text">#222222</color>
+    <!--按钮背景颜色-->
+    <color name="color_btn_background">#cccccc</color>
+    <color name="color_btn_text_task">#F9F9FB</color>
+    <color name="color_btn_text_task_two">#FF7A76</color>
+
+    <color name="color_task_coin">#ffae00</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#F2F2F2</color>
+
+    <!--广告  背景-->
+    <color name="ad_bg">#4D000000</color>
+
+    <!--用户设置-->
+    <!-- 界面按钮点击效果-->
+    <color name="feedback_line">#E5E5E5</color>
+    <color name="pressed_default">#fff</color>
+
+    <color name="cent">#32333c</color>
+    <color name="forget">#C70000</color>
+
+    <color name="red_select">#C70000</color>
+    <color name="black_select">#222222</color>
+
+    <color name="quest_type">#616161</color>
+
+    <color name="intita_line">#cccccc</color>
+
+    <color name="no_text">#717171</color>
+
+    <color name="line_view_color">#BFBFBF</color>
+    <color name="active_one">#a7d688</color>
+    <color name="active_two">#f9c869</color>
+    <color name="active_netice">#FFC832</color>
+
+    <color name="jiangli">#a45d00</color>
+
+    <color name="cash_background">#f4dede</color>
+
+    <color name="date">#eeeeee</color>
+
+    <!--wheel 的颜色值-->
+    <color name="whell_item_bg_select">#efefef</color>
+
+    <color name="view1_bg">#d2d2d2</color>
+
+    <color name="bg_loading">#f0f0f3</color>
+    <color name="black33">#333333</color>
+    <color name="black66">#666666</color>
+
+    <color name="color_progress_out_ring">#EA0707</color>
+    <color name="color_progress_ring_going">#FFF200</color>
+    <color name="color_progress_ring_background">#C20B06</color>
+
+    <color name="color_mask_end">#00000000</color>
+    <color name="color_mask_center">#66000000</color>
+    <color name="color_mask_start">#1A000000</color>
+
+
+    <!--播放器颜色配置-->
+    <color name="player_background">#00000000</color>
+
+    <color name="controller_bg_dark">#66000000</color>
+    <color name="controller_bg_light">#00000000</color>
+
+    <color name="btn__click_down">#900000</color>
+    <color name="btn__click_up">#C70000</color>
+    <color name="task_line_false">#B00000</color>
+    <color name="task_line_true">#ffe68b</color>
+    <color name="task_item_coin">#FFAE00</color>
+
+    <color name="color_short_ad_frame">#abcfff</color>
+
+    <color name="color_C70000">#C70000</color>
+    <color name="color_DDDDDD">#DDDDDD</color>
+    <color name="color_c999999">#999999</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_c222222">#222222</color>
+    <color name="color_c333333">#333333</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_c32333C">#32333c</color>
+    <color name="color_CCCCCC">#cccccc</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+    <color name="color_B3B3B3">#B3B3B3</color>
+
+
+</resources>

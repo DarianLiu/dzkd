@@ -1,0 +1,32 @@
+package com.dzkandian.common.widget.recyclerview;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.AttributeSet;
+
+/**
+ * Created by sheng on 2018/9/26.
+ * RecyclerView Bug：IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter的解决方案
+ */
+
+public class StaggeredGridLayoutManagerWrapper extends StaggeredGridLayoutManager {
+
+    public StaggeredGridLayoutManagerWrapper(int spanCount, int orientation) {
+        super(spanCount,orientation);
+    }
+
+
+    public StaggeredGridLayoutManagerWrapper(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    @Override
+    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+        try {
+            super.onLayoutChildren(recycler, state);
+        } catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--登录注册页 *** 输入框样式（11位手机号） **-->
+    <style name="login_register_edit_phone" parent="style_edit_phone">
+        <item name="android:drawableStart">@drawable/icon_reg_mobile</item>
+    </style>
+
+    <!--登录注册页 *** 输入框样式（16位密码） **-->
+    <style name="login_register_edit_pwd" parent="style_edit_pwd">
+        <item name="android:drawableStart">@drawable/icon_reg_password</item>
+    </style>
+
+    <!--登录注册页 *** 输入框样式（验证码） **-->
+    <style name="login_register_edit_code" parent="style_edit_code">
+        <item name="android:drawableStart">@drawable/icon_reg_code</item>
+    </style>
+
+    <!--登录注册页 *** 按钮样式 **-->
+    <style name="login_register_btn" parent="style_button_enable">
+        <item name="android:layout_marginTop">22dp</item>
+    </style>
+
+    <!--登录注册页 *** 获取验证码 按钮样式 **-->
+    <style name="login_register_btn_captcha" parent="style_button_captcha">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+
+    <!--登录注册页 *** 下面 注册&找回密码 样式 **-->
+    <style name="login_register_forget_text" parent="style_txt_red_little">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--登录注册页 *** 其他登录方式  的线条 **-->
+    <style name="login_other_line">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:background">@color/color_DDDDDD</item>
+    </style>
+
+    <!--登录注册页 *** 其他登录方式  的线条 **-->
+    <style name="login_other_text" parent="style_txt_black_nine_normal">
+        <item name="android:text">@string/login_other_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--登录注册页 *** 线条 **-->
+    <style name="login_line" parent="style_line" />
+
+
+</resources>

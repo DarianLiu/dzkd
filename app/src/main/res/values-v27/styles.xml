@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="BaseThem" />
+
+    <style name="SlideslipTheme" parent="SlideBaseTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <!--设置状态栏为透明-->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--导航栏不透明-->
+        <!--<item name="android:windowTranslucentNavigation">false</item>-->
+        <!--设置状态栏为主题色-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="ShortVideoSlideTheme" parent="SlideBaseTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <!--设置状态栏为透明-->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--导航栏不透明-->
+        <!--<item name="android:windowTranslucentNavigation">false</item>-->
+        <!--设置状态栏为主题色-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+
+</resources>

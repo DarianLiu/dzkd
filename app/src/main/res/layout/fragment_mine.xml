@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dzkandian.common.widget.laoding.BezierRefreshHeader
+        android:id="@+id/brh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_C70000"
+        android:orientation="vertical" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_mine_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_mine_background"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:id="@+id/iv_mine_head"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_mine_header"
+                        android:padding="1dp"
+                        android:src="@drawable/icon_mine_head" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_mine_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iv_mine_head"
+                        android:layout_alignBottom="@id/iv_mine_head"
+                        android:layout_marginStart="@dimen/t10"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/iv_mine_head"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/iv_mine_name"
+                            style="@style/mine_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name" />
+
+                        <TextView
+                            android:id="@+id/tv_mine_phone"
+                            style="@style/mine_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/mine_login_out" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_system_set"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/icon_mine_set" />
+
+                </RelativeLayout>
+
+                <!--金币区-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_coin_today"
+                            style="@style/mine_coin_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/mine_coin_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/mine_today_gold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:background="#e93131" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_coin_surplus"
+                            style="@style/mine_coin_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/mine_coin_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/mine_surplus_gold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:background="#e93131" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_coin_total"
+                            style="@style/mine_coin_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/mine_coin_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/mine_total_gold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:background="@drawable/shape_mine_background"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <!--快速提现-->
+                <TextView
+                    android:id="@+id/tv_mine_withdraw"
+                    style="@style/mine_coin_about"
+                    android:drawableTop="@drawable/icon_mine_withdraw"
+                    android:text="@string/mine_fast_withdraw" />
+
+                <!--好友邀请-->
+                <TextView
+                    android:id="@+id/tv_mine_invite"
+                    style="@style/mine_coin_about"
+                    android:drawableTop="@drawable/icon_mine_invite"
+                    android:text="@string/mine_invite" />
+
+                <!--我的订单-->
+                <TextView
+                    android:id="@+id/tv_mine_order"
+                    style="@style/mine_coin_about"
+                    android:drawableTop="@drawable/icon_mine_order"
+                    android:text="@string/mine_my_order" />
+
+                <!--收益明细-->
+                <TextView
+                    android:id="@+id/tv_mine_income"
+                    style="@style/mine_coin_about"
+                    android:drawableTop="@drawable/icon_mine_income"
+                    android:text="@string/mine_income" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_marquee_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F03C3C"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/mine_marquee_view"
+                    android:textSize="@dimen/font_little"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/iv_next"
+                    android:layout_toEndOf="@+id/iv_notice"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/iv_notice"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:background="#E62F2F"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="4dp"
+                    android:src="@drawable/icon_mine_warquee_horn" />
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="#E62F2F"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="4dp"
+                    android:src="@drawable/icon_mine_warquee_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/mine_marquee_line"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.dzkandian.common.widget.OptionView
+                    android:id="@+id/ov_mine_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:option_background="@drawable/selector_option_press"
+                    app:option_left_ImageView_drawable="@drawable/icon_mine_active_center"
+                    app:option_title_text="@string/message" />
+
+                <View style="@style/mine_view_divide" />
+
+                <com.dzkandian.common.widget.OptionView
+                    android:id="@+id/ov_mine_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:option_background="@drawable/selector_option_press"
+                    app:option_left_ImageView_drawable="@drawable/icon_mine_feedback"
+                    app:option_title_text="@string/mine_feedback" />
+
+                <View style="@style/mine_view_divide" />
+
+                <com.dzkandian.common.widget.OptionView
+                    android:id="@+id/ov_mine_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:option_background="@drawable/selector_option_press"
+                    app:option_left_ImageView_drawable="@drawable/icon_mine_question"
+                    app:option_title_text="@string/mine_question" />
+
+                <View style="@style/mine_view_divide" />
+
+                <com.dzkandian.common.widget.OptionView
+                    android:id="@+id/ov_mine_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:option_background="@drawable/selector_option_press"
+                    app:option_left_ImageView_drawable="@drawable/icon_mine_collection"
+                    app:option_title_text="@string/mine_collection" />
+            </LinearLayout>
+
+            <com.dzkandian.common.widget.OptionView
+                android:id="@+id/ov_mine_my_set"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                app:option_background="@drawable/selector_option_press"
+                app:option_left_ImageView_drawable="@drawable/icon_mine_user_set"
+                app:option_title_text="@string/mine_my_set" />
+
+            <View style="@style/mine_view_divide" />
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_native_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/view_menu"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

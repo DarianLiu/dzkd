@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--*************** 个人中心 ***************-->
+
+    <!--个人中心 * （用户名称手机号）************************************* START-->
+    <style name="mine_user" parent="style_txt_white_normal">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--个人中心 * （用户金币金额）-->
+    <style name="mine_coin_number" parent="style_txt_white_large">
+        <item name="android:text">@string/zero</item>
+    </style>
+
+    <!--个人中心 * （用户金币提示：今日、剩余、总金币）-->
+    <style name="mine_coin_tip" parent="style_txt_white_small" />
+
+    <!--个人中心 *（用户金币相关：提现、邀请、订单、收益）-->
+    <style name="mine_coin_about" parent="style_txt_black_two_small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <!--个人中心 ************ 确认按钮（背景：红色、灰色；字体：纯白色16sp 默认不可点击）**-->
+    <style name="mine_btn_confirm" parent="style_button_enable" />
+
+    <!--账户设置 *（头像提示文字）************************************* START-->
+    <style name="mine_user_set_tip" parent="style_txt_black_two_normal" />
+
+    <!--账户设置 * 修改昵称 （白色背景、最大长度10位）-->
+    <style name="mine_edit_nickname" parent="style_edit_single">
+        <item name="android:inputType">text</item>
+        <item name="android:hint">@string/hint_change_name</item>
+        <item name="android:maxLength">10</item>
+        <item name="android:background">@color/color_FFFFFF</item>
+    </style>
+
+    <!--账户设置 * （手机号码输入框）-->
+    <style name="mine_edit_phone" parent="style_edit_phone">
+        <item name="android:background">@color/color_FFFFFF</item>
+    </style>
+
+    <!--账户设置 * （验证码输入框）-->
+    <style name="mine_edit_code" parent="style_edit_code">
+        <item name="android:background">@color/color_FFFFFF</item>
+    </style>
+
+    <!--账户设置 * （密码输入框）-->
+    <style name="mine_edit_password" parent="style_edit_pwd">
+        <item name="android:background">@color/color_FFFFFF</item>
+    </style>
+
+    <!--登录注册页 *** 获取验证码 按钮样式 **-->
+    <style name="mine_btn_captcha" parent="style_button_captcha">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--系统设置 * 关于大众看点（当前版本）************************************* START-->
+    <style name="mine_about_me_version" parent="style_txt_black_two_normal">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--系统设置 * 关于大众看点（标题、商户合作QQ）-->
+    <style name="mine_about_me_title" parent="style_txt_red_normal" />
+
+    <!--系统设置 * 关于大众看点（介绍内容1、2、3）-->
+    <style name="mine_about_me_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:text">@string/system_set_about_summary</item>
+    </style>
+
+    <!--个人中心**消息中心、意见反馈、常见问题、我的收藏分割线 -->
+    <style name="mine_view_divide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+     <!--消息中心 TabHost文本-->
+    <style name="mine_message_center_tabhost_txt">
+         <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_tab_bg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/selector_order_text_color</item>
+        <item name="android:textSize">@dimen/t18</item>
+    </style>
+
+    <!--消息中心 TabHost小红点-->
+    <style name="mine_message_center_tabhost_point">
+         <item name="android:layout_width">@dimen/p6</item>
+         <item name="android:layout_height">@dimen/p6</item>
+         <item name="android:background">@drawable/shape_red_point</item>
+    </style>
+
+    <!--消息中心活动公告fragment itemview的时间文本样式-->
+    <style name="mine_message_center_active_time_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_text_tip</item>
+        <item name="android:textSize">@dimen/t12</item>
+    </style>
+
+    <!--消息中心活动公告fragment itemview的活动icon样式-->
+    <style name="mine_message_center_active_icon_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/active_netice</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--消息中心活动公告fragment itemview的活动简介样式-->
+    <style name="mine_message_center_active_brief_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:paddingBottom">@dimen/p6</item>
+        <item name="android:paddingLeft">@dimen/p10</item>
+        <item name="android:paddingTop">@dimen/p5</item>
+        <item name="android:paddingRight">@dimen/p10</item>
+        <item name="android:textColor">@color/color_text_tip</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--消息中心活动公告fragment itemview的立即XX样式-->
+    <style name="mine_message_center_active_instant_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/p14</item>
+        <item name="android:layout_marginLeft">@dimen/p10</item>
+        <item name="android:layout_marginRight">@dimen/p10</item>
+        <item name="android:layout_marginTop">@dimen/p14</item>
+        <item name="android:drawableRight">@drawable/icon_task_arrow_right</item>
+        <item name="android:textColor">@color/color_text_title</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--消息中心我的消息fragment itemview的时间文本样式-->
+    <style name="mine_message_center_msg_time_txt" parent="mine_message_center_active_time_txt">
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--消息中心我的消息fragment itemview的标题样式-->
+    <style name="mine_message_center_msg_title_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black33</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--消息中心我的消息fragment itemview的内容样式-->
+    <style name="mine_message_center_msg_content_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/p16</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:textColor">@color/black66</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--意见反馈输入框内容样式-->
+    <style name="mine_feed_back_edit_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">top</item>
+        <item name="android:hint">@string/user_proposal</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">@dimen/p10</item>
+        <item name="android:maxLength">250</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--意见反馈输入框手机号样式-->
+    <style name="mine_feed_back_phone_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:hint">@string/user_phone</item>
+        <item name="android:gravity">left</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:digits">1234567890</item>
+        <item name="android:maxLength">11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingTop">@dimen/p10</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--意见反馈图片样式-->
+    <style name="mine_feed_back_img">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginTop">@dimen/p20</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:src">@drawable/shared_jiantou_xia</item>
+    </style>
+
+    <!--意见反馈按钮样式-->
+    <style name="mine_feed_back_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@drawable/selector_btn_bg</item>
+        <item name="android:enabled">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--我的收藏删除按钮样式-->
+    <style name="mine_favour_delete_btn">
+        <item name="android:layout_width">@dimen/p50</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/selector_collection_close_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--快速提现 * 头部的钱包类型 字体-->
+    <style name="mine_quickcash_type_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/t18</item>
+    </style>
+
+    <!--快速提现 * 钱包分类的姓名 字体-->
+    <style name="mine_quickcash_payname_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--快速提现 * 钱包分类的手机号 字体-->
+    <style name="mine_quickcash_payphone_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/t16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--快速提现 * 钱包分类的箭头 字体-->
+    <style name="mine_quickcash_payarrow_image">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:src">@drawable/icon_task_arrow_right</item>
+    </style>
+
+    <!--快速提现 * 温馨提示 字体-->
+    <style name="mine_quickcash_cozytip_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textSize">@dimen/t12</item>
+        <item name="android:textColor">@color/color_c999999</item>
+    </style>
+
+    <!--好友邀请 * 徒弟 || 总收益 字体-->
+    <style name="mine_invitation_apprenticeincome_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/cent</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--好友邀请 * 徒弟 || 总收益右边的箭头 字体-->
+    <style name="mine_invitation_apprenticeincome_righttext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:drawableEnd">@drawable/icon_task_arrow_right</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--好友邀请 * 标题 字体-->
+    <style name="mine_invitation_title">
+        <item name="android:textColor">@color/color_c222222</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--好友邀请 * 一级标题 字体-->
+    <style name="mine_invitation_first_title" parent="mine_invitation_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <!--好友邀请 * 二级标题 字体-->
+    <style name="mine_invitation_second_title" parent="mine_invitation_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <!--好友邀请 * 二级描述 字体-->
+    <style name="mine_invitation_second_describe">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textColor">@color/color_c32333C</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--好友邀请 * 次数红 字体-->
+    <style name="mine_invitation_frequency_red">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_C70000</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--好友邀请 * 次数红 字体-->
+    <style name="mine_invitation_frequency_black">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_c32333C</item>
+        <item name="android:textSize">@dimen/t14</item>
+    </style>
+
+    <!--好友邀请 * 次数表格 竖线 -->
+    <style name="mine_invitation_vertical_line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_CCCCCC</item>
+    </style>
+
+    <!--好友邀请 * 次数表格 横线 -->
+    <style name="mine_invitation_transverse_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_CCCCCC</item>
+    </style>
+
+    <!--消息中心 * 我的消息 回复点赞 用户名 -->
+    <style name="mine_message_replypraise_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:textSize">@dimen/t14</item>
+        <item name="android:textColor">@color/color_c333333</item>
+    </style>
+
+    <!--消息中心 * 我的消息 回复点赞 时间 -->
+    <style name="mine_message_replypraise_time">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:textSize">@dimen/t12</item>
+        <item name="android:textColor">@color/color_c999999</item>
+    </style>
+
+    <!--消息中心 * 我的消息 回复点赞 回复内容 -->
+    <style name="mine_message_replypraise_content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textSize">@dimen/t16</item>
+        <item name="android:textColor">@color/color_c333333</item>
+    </style>
+
+    <!--消息中心 * 我的消息 回复点赞 文章标题 -->
+    <style name="mine_message_replypraise_article_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textSize">@dimen/t14</item>
+        <item name="android:textColor">@color/color_c333333</item>
+    </style>
+
+</resources>

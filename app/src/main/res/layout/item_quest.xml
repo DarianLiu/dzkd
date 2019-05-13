@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/ll_item_wenti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_wenti"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="问题"
+            style="@style/style_quest_text1" />
+
+        <ImageView
+            android:id="@+id/iv_wenti_xia"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/shared_jiantou_you"
+            android:visibility="visible"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/iv_wenti_shang"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@drawable/shared_jiantou_xia" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_daan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingBottom="7dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:text="答案"
+        style="@style/style_quest_text2" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_fab_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#f2f2f2"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_comment_back"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/icon_comment_back" />
+
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="8"
+        android:background="@drawable/shape_news_comment"
+        android:maxLength="120"
+        android:maxLines="1"
+        android:focusable="false"
+        android:singleLine="true"
+        android:paddingStart="10dp"
+        android:hint="@string/hint_news_comment"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:textColorHint="#cccccc"
+        android:textCursorDrawable="@drawable/shape_edit_text_cursor"/>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_comment_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="6dp"
+            android:src="@drawable/icon_comment" />
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/comment_count_backgrount"
+            android:gravity="center"
+            android:paddingEnd="1dp"
+            android:paddingStart="1dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_comment_barrage"
+        android:layout_width="44dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:paddingEnd="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="4dp"
+        android:paddingStart="8dp"
+        android:src="@drawable/selector_comment_barrage" />
+
+    <ImageView
+        android:id="@+id/iv_comment_collection"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/selector_comment_collection" />
+
+    <ImageView
+        android:id="@+id/iv_comment_share"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:paddingLeft="4dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/selector_comment_share" />
+
+</LinearLayout>

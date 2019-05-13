@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_passwordLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/p40"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <EditText
+        android:id="@+id/et_login_pw_phone"
+        style="@style/login_register_edit_phone" />
+
+    <View style="@style/login_line" />
+
+    <EditText
+        android:id="@+id/et_login_pw_password"
+        style="@style/login_register_edit_pwd"
+        android:layout_height="44dp" />
+
+    <View style="@style/login_line" />
+
+    <!--密码登录按钮-->
+    <Button
+        android:id="@+id/btn_login_password"
+        android:text="@string/btn_login"
+        style="@style/login_register_btn"/>
+
+</LinearLayout>

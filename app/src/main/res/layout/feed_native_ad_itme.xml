@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/native_outer_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/native_main_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/native_adlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/p25"
+        android:background="@drawable/shape_mine_adlogo_bg"
+        android:paddingLeft="@dimen/p3"
+        android:paddingTop="@dimen/p2"
+        android:paddingRight="@dimen/p3"
+        android:paddingBottom="@dimen/p2"
+        android:text="@string/ad"
+        android:textColor="@color/white"
+        android:textSize="@dimen/t10" />
+
+    <TextView
+        android:id="@+id/native_ad_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ad_bg"
+        android:paddingLeft="@dimen/p15"
+        android:paddingTop="@dimen/p10"
+        android:textSize="@dimen/t20"
+        android:paddingRight="@dimen/p15"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/p10"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

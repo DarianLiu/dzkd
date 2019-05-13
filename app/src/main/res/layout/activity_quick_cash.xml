@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_below="@+id/view_statue"
+        layout="@layout/include_toolbar" />
+    <RelativeLayout
+        android:id="@+id/rLayout_quickcash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+        <!--提现类型-->
+        <LinearLayout
+            android:id="@+id/layout_paytype"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_quickcash_typewechat"
+                style="@style/mine_quickcash_type_text"
+                android:paddingStart="20dp"
+                android:text="@string/cash_Wechat"
+                android:textColor="@color/color_C70000" />
+
+            <TextView
+                android:id="@+id/tv_quickcash_typealipay"
+                style="@style/mine_quickcash_type_text"
+                android:paddingEnd="20dp"
+                android:text="@string/cash_Payment"
+                android:textColor="@color/color_c222222" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_total"
+            android:layout_below="@+id/layout_paytype"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--提现的微信账号信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_cash_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ll_pay_type"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_cash_weixinPayName"
+                        style="@style/mine_quickcash_payname_text"
+                        android:drawableStart="@drawable/selector_cash_wechat"
+                        android:text="@string/cash_not_bind_Wechat" />
+
+                    <TextView
+                        android:id="@+id/tv_cash_weixinPayPhone"
+                        style="@style/mine_quickcash_payphone_text"
+                        android:layout_toRightOf="@+id/tv_cash_weixinPayName"
+                        android:layout_toLeftOf="@+id/iv_weChat_arrow_right"
+                        android:text="" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_weChat_arrow_right"
+                        style="@style/mine_quickcash_payarrow_image" />
+
+                </RelativeLayout>
+
+                <!--提现的支付宝账号信息-->
+                <RelativeLayout
+                    android:id="@+id/ll_cash_zhifubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ll_pay_type"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/tv_cash_alipayName"
+                        style="@style/mine_quickcash_payname_text"
+                        android:drawableStart="@drawable/selector_cash_alipay"
+                        android:text="@string/cash_not_bind_Payment" />
+
+                    <TextView
+                        android:id="@+id/tv_cash_alipayAccount"
+                        style="@style/mine_quickcash_payphone_text"
+                        android:layout_toRightOf="@+id/tv_cash_alipayName"
+                        android:layout_toLeftOf="@+id/iv_quice_alipay_right"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/iv_quice_alipay_right"
+                        style="@style/mine_quickcash_payarrow_image" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cash_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:padding="10dp" />
+                <!--提现的金额类型-->
+
+                <TextView
+                    android:id="@+id/tv_cash_surplus"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="@string/cash_curr_remainder"
+                    android:textColor="@color/black_select"
+                    android:textSize="@dimen/t16"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_quickcash_cozy"
+                    style="@style/mine_quickcash_cozytip_text"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_quickcash_tip"
+                    style="@style/mine_quickcash_cozytip_text" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--合计金币-->
+        <RelativeLayout
+            android:id="@+id/rl_total"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_cash_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="@string/cash_total_gold"
+                android:textColor="@color/red_select"
+                android:textSize="@dimen/t16" />
+
+            <Button
+                android:id="@+id/b_cash_tixian"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/selector_btn_click_color"
+                android:text="@string/button_cash"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t16" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_errorview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_error_network"
+            android:gravity="center"
+            android:text="@string/error_network" />
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_btn_click_shape"
+            android:text="@string/btn_reload"
+            android:textColor="@color/color_text_white"
+            android:textSize="@dimen/t14" />
+
+    </LinearLayout>
+</RelativeLayout>

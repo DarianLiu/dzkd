@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="2dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_danmu"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/danmu_item_backgrount"
+        android:gravity="center">
+        <!--android:background="@drawable/danmu_item_backgrount"-->
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="10dp"
+            android:gravity="center_vertical"
+            android:text="这是一个很不错的地方"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t16" />
+
+        <ImageView
+            android:id="@+id/iv_fabulous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_content"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/selector_barrage_thumbs_up" />
+
+        <TextView
+            android:id="@+id/tv_fabulous"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_fabulous"
+            android:layout_marginStart="1dp"
+            android:text="1"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/default_background"
+            android:textSize="@dimen/t16" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_danmu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/danmu_item_head_backgrount"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_mine_head" />
+
+</RelativeLayout>

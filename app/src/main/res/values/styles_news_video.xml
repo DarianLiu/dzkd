@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--标题搜索输入框样式-->
+    <style name="style_edit_search" parent="style_txt_gray_search">
+        <item name="android:textColorHint">@color/color_B3B3B3</item>
+        <item name="android:textCursorDrawable">@drawable/shape_edit_text_cursor</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLength">120</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/shape_search_bg</item>
+        <item name="android:paddingLeft">@dimen/spacing_small</item>
+        <item name="android:paddingRight">@dimen/spacing_small</item>
+        <item name="android:hint">@string/hint_text_search</item>
+        <item name="android:drawableStart">@drawable/icon_search_top</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--新闻列表 *** 线条 **-->
+    <style name="news_line" parent="style_line">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <!--资讯列表标题 style-->
+    <style name="news_title_text" parent="style_txt_black_two_large">
+        <item name="android:text">@string/news_title</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--普通视频的内容字体样式-->
+    <style name="video_normal_content_txt">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/p24</item>
+        <item name="android:paddingRight">@dimen/p24</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <!--普通视频的时间字体样式-->
+    <style name="video_normal_time_txt">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingBottom">@dimen/p5</item>
+        <item name="android:textSize">@dimen/t12</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--普通视频的播放logo样式-->
+    <style name="video_normal_logo_img">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--普通视频的广告字体样式-->
+    <style name="video_normal_ads_txt" parent="video_normal_content_txt">
+        <item name="android:paddingTop">@dimen/p10</item>
+        <item name="android:paddingBottom">@dimen/p10</item>
+    </style>
+
+    <!--小视频内容字体样式-->
+    <style name="video_tiny_content_txt">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/t16</item>
+    </style>
+
+    <style name="video_tiny_author_txt">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/color_text_white</item>
+        <item name="android:textSize">@dimen/p12</item>
+    </style>
+
+
+    <!--资讯列表置顶 style-->
+    <style name="news_settop_text" parent="style_txt_white_small">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_btn_settop</item>
+        <item name="android:text">@string/news_settop</item>
+    </style>
+
+    <!--资讯列表广告 style-->
+    <style name="news_ad_text" parent="style_txt_white_small">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_btn_ads</item>
+        <item name="android:text">@string/news_ad</item>
+    </style>
+
+
+</resources>

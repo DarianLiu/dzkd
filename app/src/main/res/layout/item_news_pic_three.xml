@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_news_three_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        style="@style/news_title_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="9.5dp"
+        android:paddingRight="9.5dp">
+
+        <ImageView
+            android:id="@+id/iv_news_three1"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:padding="0.5dp" />
+
+        <ImageView
+            android:id="@+id/iv_news_three2"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:padding="0.5dp" />
+
+        <ImageView
+            android:id="@+id/iv_news_three3"
+            android:layout_width="0dp"
+            android:layout_height="94dp"
+            android:layout_weight="1"
+            android:padding="0.5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_news_three_writer"
+            style="@style/style_txt_black_nine_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/news_writer" />
+
+        <TextView
+            android:id="@+id/tv_news_three_time"
+            style="@style/style_txt_black_nine_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/news_time" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/news_line"/>
+
+</LinearLayout>

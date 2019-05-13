@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--任务中心 item 箭头方向-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_task_arrow_true" android:state_selected="true" />
+    <item android:drawable="@drawable/icon_task_arrow_false" android:state_selected="false" />
+</selector>

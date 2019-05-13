@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_login_cd_phone"
+            style="@style/login_register_edit_phone"
+            android:layout_toStartOf="@+id/b_login_cd_getcode" />
+
+        <Button
+            android:id="@+id/b_login_cd_getcode"
+            style="@style/login_register_btn_captcha"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <View style="@style/login_line" />
+
+
+    <EditText
+        android:id="@+id/et_login_cd_code"
+        style="@style/login_register_edit_code" />
+
+    <View style="@style/login_line" />
+
+    <!--验证码登录按钮-->
+    <Button
+        android:id="@+id/btn_login_code"
+        style="@style/login_register_btn"
+        android:text="@string/btn_login" />
+
+</LinearLayout>

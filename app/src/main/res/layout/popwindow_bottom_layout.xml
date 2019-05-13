@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_popupwindow_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/view_dataSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/p260"
+        android:layout_marginTop="@dimen/p22"
+        android:orientation="horizontal">
+
+        <com.dzkandian.common.widget.laoding.date.WheelView
+            android:id="@+id/year"
+            style="@style/style_date_wheelview" />
+
+
+        <View style="@style/style_date_view" />
+
+        <com.dzkandian.common.widget.laoding.date.WheelView
+            android:id="@+id/month"
+            style="@style/style_date_wheelview" />
+
+        <View style="@style/style_date_view" />
+
+        <com.dzkandian.common.widget.laoding.date.WheelView
+            android:id="@+id/day"
+            style="@style/style_date_wheelview" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_tclOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_dataSelect"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/p22"
+        android:text="@string/button_change_name"
+        android:textColor="@color/red_select"
+        android:textSize="@dimen/t18" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:drawable="@color/color_FFFFFF" />
+
+    <item>
+        <bitmap
+            android:gravity="top"
+            android:src="@drawable/icon_splash_background" />
+    </item>
+
+    <!--<item android:bottom="20dp">-->
+
+        <!--<bitmap-->
+            <!--android:gravity="bottom|center"-->
+            <!--android:src="@drawable/icon_splash_logo"-->
+            <!--android:mipMap="true" />-->
+    <!--</item>-->
+
+</layer-list>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="58dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/icon_mine_jixiangwu" />
+
+            <TextView
+                android:id="@+id/tv_about_me_version"
+                style="@style/mine_about_me_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center" />
+
+            <TextView
+                style="@style/mine_about_me_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/system_set_about_summary" />
+
+            <TextView
+                android:id="@+id/tv_about_me_content_one"
+                style="@style/mine_about_me_content" />
+
+            <TextView
+                android:id="@+id/tv_about_me_content_two"
+                style="@style/mine_about_me_content" />
+
+            <TextView
+                android:id="@+id/tv_about_me_content_three"
+                style="@style/mine_about_me_content" />
+
+            <TextView
+                android:id="@+id/tv_about_me_qq"
+                style="@style/mine_about_me_title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_btn_about"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/system_set_about_qq" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

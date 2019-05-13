@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<com.kk.taurus.playerbase.widget.BaseVideoView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_mask_background"
+        android:ellipsize="end"
+        android:gravity="start|bottom"
+        android:maxLines="2"
+        android:minHeight="80dp"
+        android:visibility="gone"
+        android:paddingBottom="25dp"
+        android:paddingEnd="83dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/color_text_white"
+        android:textSize="@dimen/t18" />
+
+</RelativeLayout>

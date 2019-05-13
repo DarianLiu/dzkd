@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/red_rain_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/red_rain_LottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/red_rain_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="666元"
+        android:textSize="40sp"
+        android:textColor="#f8c76b"/>
+
+    <ImageView
+        android:id="@+id/red_rain_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:src="@drawable/icon_redrain_close"/>
+
+    <ImageView
+        android:id="@+id/red_rain_activity"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/red_rain_activity_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:src="@drawable/icon_redactivity_close"/>
+
+</RelativeLayout>

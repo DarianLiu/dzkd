@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_task_sign_bg"
+        android:orientation="vertical">
+        <!--7天签到各项-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_task_sign_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="30dp">
+
+            <!--1天-->
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_first_day"
+                    android:text=""
+                    style="@style/task_center_sign_normal_txt"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_one_day"
+                    android:text=""
+                    style="@style/task_center_time_normal_txt"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--2天-->
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_second_day"
+                    android:text=""
+                    style="@style/task_center_sign_normal_txt"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_two_day"
+                    android:text=""
+                    style="@style/task_center_time_normal_txt"
+                   />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--3天-->
+            <LinearLayout
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_third_day"
+                    android:text=""
+                    style="@style/task_center_sign_big_txt"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_three_day"
+                    android:text=""
+                    style="@style/task_center_time_big_txt"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--4天-->
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_forth_day"
+                    android:text=""
+                    style="@style/task_center_sign_normal_txt"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_four_day"
+                    android:text=""
+                    style="@style/task_center_time_normal_txt"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--5天-->
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_fifth_day"
+                    android:text=""
+                    style="@style/task_center_sign_normal_txt"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_five_day"
+                    android:text=""
+                    style="@style/task_center_time_normal_txt"
+                   />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--6天-->
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_sixth_day"
+                    android:text=""
+                    style="@style/task_center_sign_normal_txt"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_six_day"
+                    android:text=""
+                    style="@style/task_center_time_normal_txt" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/view_line_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_task_sign_line" />
+
+            </RelativeLayout>
+
+            <!--7天-->
+            <LinearLayout
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_seventh_day"
+                    android:text=""
+                    style="@style/task_center_sign_big_txt"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_seven_day"
+                    android:text=""
+                    style="@style/task_center_time_big_txt"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_sign"
+            style="@style/task_center_sign_btn"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_sign"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/ll_sign"
+        android:background="@drawable/icon_task_sign_bottonbg"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_below="@+id/btn_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dzkandian.common.widget.autoviewpager.AutoScrollViewPager
+            android:id="@+id/autoScrollViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/autoScrollIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

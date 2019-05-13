@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <!--昵称-->
+    <EditText
+        android:id="@+id/et_nickname"
+        style="@style/mine_edit_nickname"
+        android:layout_marginTop="20dp" />
+
+    <!--确认绑定-->
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/mine_btn_confirm"
+        android:layout_marginTop="44dp"
+        android:text="@string/btn_confirm" />
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">大众看点</string>
+
+    <string name="zero">0</string>
+    <string name="digits_phone">0123456789</string>
+    <string name="digits_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="menu_news">看点</string>
+    <string name="menu_video">视频</string>
+    <string name="menu_task_center">任务中心</string>
+    <string name="menu_mine">我的</string>
+
+    <string name="title_back">返回</string>
+    <string name="title_user_set">账户设置</string>
+    <string name="title_update_nickname">修改昵称</string>
+    <string name="title_update_phone">绑定手机号</string>
+    <string name="title_old_phone_check">验证原手机号</string>
+    <string name="title_afresh_update_phone">重新绑定手机号</string>
+    <string name="title_update_weChatPay">管理微信钱包</string>
+    <string name="title_update_aLiPay">管理支付宝钱包</string>
+    <string name="title_revise_Pwd">修改密码</string>
+    <string name="title_get_Pwd">找回密码</string>
+    <string name="title_cash">快速提现</string>
+    <string name="title_record">收益明细</string>
+    <string name="title_news_comment">资讯评论</string>
+    <string name="title_video_comment">视频评论</string>
+    <string name="title_short_video_comment">小视频评论</string>
+    <string name="title_active_center">活动中心</string>
+    <string name="title_column_manage">频道管理</string>
+
+    <!--时段奖励的已领取过文案-->
+    <string name="reward_time_already">你领取过了，请下一个时段领取吧~~</string>
+
+
+    <!--刷新文字自定义-->
+    <string name="header_refreshing">正在刷新</string>
+    <string name="refresh_header_lastTime">上次更新 MM-dd HH:mm</string>
+    <string name="footer_loading">正在加载</string>
+    <string name="delete_loose_hand">松手即可删除</string>
+    <string name="delete_drag_to_here">拖到这里删除</string>
+    <string name="str_plus">+&#160;</string>
+
+    <!--Button文字-->
+    <string name="btn_reload">重新加载</string>
+    <string name="btn_bind_right_now">立即绑定</string>
+    <string name="btn_sign_right_now">立即签到</string>
+    <string name="btn_signed">已签到</string>
+    <string name="btn_receive_reward">领取奖励</string>
+    <string name="btn_receive_already">已领取</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_album">打开相册</string>
+    <string name="btn_camera">打开相机</string>
+    <string name="btn_send">发送</string>
+    <string name="btn_confirm">确认</string>
+    <string name="btn_get_code">获取验证码</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_search">搜索</string>
+
+
+    <!--EditText提示文字-->
+    <string name="hint_mobile">请输入手机号</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="hint_smsCode">请输入验证码</string>
+    <string name="hint_password_reg">请设置6&#8211;16位密码</string>
+
+    <string name="hint_login_Pwd">请输入6&#8211;16位登录密码</string>
+    <string name="hint_set_password">请设置6&#8211;16位密码</string>
+
+    <string name="hint_news_comment">快来说说你的看法</string>
+    <string name="hint_news_comment_input">请输入你的评论&#8230;</string>
+    <string name="hint_new_phone">请输入新的手机号</string>
+    <string name="hint_old_phone">请输入原来的手机号</string>
+
+    <string name="hint_text_search">搜索你感兴趣的内容</string>
+
+    <!--任务中心-->
+    <string name="sign_in_take_the_prize">签到领奖</string>
+
+
+    <!--个人中心-->
+    <string name="mine_today_gold">今日金币</string>
+    <string name="mine_surplus_gold">剩余金币</string>
+    <string name="mine_total_gold">总金币</string>
+    <string name="mine_fast_withdraw">快速提现</string>
+    <string name="mine_invite">好友邀请</string>
+    <string name="mine_my_order">我的订单</string>
+    <string name="mine_income">收益明细</string>
+    <string name="mine_feedback">意见反馈</string>
+    <string name="mine_question">常见问题</string>
+    <string name="mine_collection">我的收藏</string>
+    <string name="mine_collection_news">资讯</string>
+    <string name="mine_collection_video">视频</string>
+    <string name="mine_collection_short">小视频</string>
+    <string name="mine_my_set">帐户设置</string>
+    <string name="mine_login_out">未登录</string>
+
+    <!--用户设置-->
+    <string name="user_set_head">头像</string>
+    <string name="user_set_name">昵称</string>
+    <string name="user_set_phone">手机号</string>
+    <string name="user_set_sex">性别</string>
+    <string name="user_set_birthday">生日</string>
+    <string name="user_set_weiXin">管理微信钱包</string>
+    <string name="user_set_payment">管理支付宝钱包</string>
+    <string name="user_set_revisePwd">修改密码</string>
+    <string name="user_set_forgetPwd">退出登录</string>
+
+    <!--系统设置-->
+    <string name="system_set">系统设置</string>
+    <string name="system_set_update">检查更新</string>
+    <string name="system_set_update_general">发现新版本</string>
+    <string name="system_set_update_nowifi_title">网络状态提示</string>
+    <string name="system_set_update_nowifi_message">当前使用的是数据流量，确定要继续吗？</string>
+    <string name="system_set_update_progress_title">更新中</string>
+    <string name="system_set_update_progress_message">正在下载安装包，请勿离开应用</string>
+    <string name="system_set_clean">清除缓存</string>
+    <string name="system_set_protocol">用户协议</string>
+    <string name="system_set_protocol_url">http://www.dzkandian.com/user.protocol.html?_r=12465878654</string>
+    <string name="system_set_about">关于大众看点</string>
+    <string name="system_set_about_summary">大众有看点 人人有价值</string>
+    <string name="system_set_about_qq">商务合作QQ：2023180373</string>
+    <string name="system_set_about_text1red">【海量资讯】</string>
+    <string name="system_set_about_text1black">大众看点集合了看点、健康、时尚、社会、汽车等各类新闻，并保持24小时每时每刻不断更新，旨在于带给用户前所未有的阅读体验。</string>
+    <string name="system_set_about_text2red">【个性推荐】</string>
+    <string name="system_set_about_text2black">智能筛选推送你感兴趣的资讯内容，大众看点为用户的每一次信任负责，拒绝滥竽充数。你的使用时间越长，我们的推荐越精准。</string>
+    <string name="system_set_about_text3red">【用户至上】</string>
+    <string name="system_set_about_text3black">晨读、路上、咖啡厅、睡前，一切从你的指尖开始，从开始到发生。大众看点，期待与尚未谋面的你，发生关系。</string>
+
+    <!--任务中心-->
+    <string name="task_take_the_prize">签到领奖</string>
+    <string name="task_novice">新手任务</string>
+    <string name="task_daily">日常任务</string>
+
+
+    <!--错误提示语-->
+    <string name="error_network">呀，你的网络好像不太顺畅哦~~</string>
+    <string name="error_empty_disciple">身为一代宗师竟收不到徒弟~~</string>
+    <string name="error_empty_disciple_earning">目前还没有徒弟孝敬你~~</string>
+    <string name="error_empty_earning">还真的是一贫如洗啊，继续加油~~</string>
+    <string name="error_empty_order">非常抱歉，没有找到任何订单~~</string>
+    <string name="error_empty_notice">非常抱歉，公告列表为空~~</string>
+    <string name="error_empty_comment">暂无评论，快来说说你的看法~~</string>
+    <string name="error_network_comment">出现了一些小状况，请稍后重试~~</string>
+    <string name="error_empty_message">别看啦，有消息会通知你的~~</string>
+    <string name="error_empty_collection">当前没有收藏任何东西~~</string>
+    <string name="error_empty_search">未找到相关内容，换个词试试~~</string>
+
+
+    <string name="time">00:00</string>
+
+    <!--修改昵称-->
+    <string name="hint_change_name">请输入昵称(2&#8211;10位)</string>
+    <string name="button_change_name">确定</string>
+    <string name="notSet">未设置</string>
+    <string name="unbound">未绑定</string>
+
+    <!--绑定手机号-->
+    <string name="hint_update_phone">请输入手机号</string>
+    <string name="hint_you_code">请输入验证码</string>
+    <string name="button_get_code">获取验证码</string>
+    <string name="hint_input_Pwd">请输入6&#8211;16位登录密码</string>
+    <string name="hint_set_Pwd">设置6&#8211;16位登录密码</string>
+    <string name="button_confirm">绑定手机号</string>
+
+    <!--重新绑定手机号-->
+    <string name="hint_afresh_update_phone">请输入新的手机号</string>
+    <string name="hint_afresh_update_phone_code">请输入验证码</string>
+    <string name="hint_afresh_you_code">你的验证码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="button_afresh_get_code">获取验证码</string>
+    <string name="hint_afresh_original_Pwd">输入原密码</string>
+    <string name="button_afresh_confirm">确定验证</string>
+    <!--管理支付宝-->
+    <string name="ALiPay_name">支付宝姓名: </string>
+    <string name="ALiPay_code">支付宝账户: </string>
+    <string name="ALiPay_button">绑定</string>
+    <string name="ALiPay_prompt">温馨提示:</string>
+    <string name="ALiPay_prompt_text">支付宝姓名请填写支付宝绑定银行卡的实名认证姓名</string>
+
+    <!--管理微信-->
+    <string name="WeChat_name">真实姓名:</string>
+    <string name="WeChat_phone">手机号码:</string>
+    <string name="WeChat_power">微信授权:</string>
+    <string name="AliPay_power">支付宝授权:</string>
+    <string name="WeChat_prompt">温馨提示:</string>
+    <string name="WeChat_prompt_text">真实姓名请填写微信绑定银行卡的实名认证姓名</string>
+
+    <string name="dialog_root_reminder">很抱歉，程序运行环境出问题啦。请更换其他手机继续使用大众看点，感谢你的使用！</string>
+    <string name="dialog_prompt">温馨提示！</string>
+    <string name="dialog_i_know">我知道了</string>
+
+    <!--修改密码-->
+    <string name="revise_old_Pwd">输入原密码</string>
+    <string name="revise_new_Pwd">输入新密码</string>
+    <string name="button_revice">确定修改</string>
+
+
+    <!--快速提现-->
+    <string name="cash_Wechat">微信钱包</string>
+    <string name="cash_Payment">支付宝</string>
+    <string name="cash_not_bind_Wechat">你尚未绑定微信账户</string>
+    <string name="cash_not_bind_Payment">你尚未设置支付宝账户</string>
+    <string name="cash_curr_remainder">当前余额：</string>
+    <string name="cash_gold">金币</string>
+    <string name="item_task_record">收益明显</string>
+    <string name="mine_task_record_income">收入</string>
+    <string name="mine_task_record_num">+50金币</string>
+    <string name="mine_task_record_date">2018&#8211;04&#8211;30</string>
+    <string name="cash_total_gold">合计金币:  0金币</string>
+    <string name="button_cash">立即兑换</string>
+
+    <!--好友邀请-->
+    <string name="invite">立即邀请</string>
+    <string name="invite_disciple">成功邀请的徒弟</string>
+    <string name="invite_earnings">徒弟提供的总收益</string>
+    <string name="invite_rules">邀请规则</string>
+    <string name="invite_income">【邀请收益】</string>
+    <string name="invite_yield">【提成收益】</string>
+    <string name="reward_rules">奖励发放规则</string>
+    <string name="invite_7ci">7次发放如下</string>
+    <string name="invite_ci">次数</string>
+    <string name="invite_jinbi">金币数</string>
+    <string name="invite_1">第一次</string>
+    <string name="invite_2">第二次</string>
+    <string name="invite_3">第三次</string>
+    <string name="invite_4">第四次</string>
+    <string name="invite_5">第五次</string>
+    <string name="invite_6">第六次</string>
+    <string name="invite_7">第七次</string>
+    <string name="process">正在处理</string>
+    <string name="all_order">全部订单</string>
+    <string name="title_order">我的订单</string>
+    <string name="order_num">订单号</string>
+    <string name="order_process">处理中</string>
+
+
+    <!--日期选择轮子的title-->
+    <string name="query_time_select_title">请选择日期</string>
+
+    <string name="begin_at">开始于\n</string>
+    <string name="end_at">结束于\n</string>
+
+    <string name="time_start_larger_end_not_allowed">开始时间不能大于结束时间</string>
+    <string name="register">用户注册</string>
+    <!--toast-->
+    <string name="toast_login_fail">登录失败，手机上没有安装微信</string>
+    <string name="toast_put_forward">提现操作成功，请耐心等待审核</string>
+    <string name="toast_authorize">授权成功</string>
+    <string name="toast_authorize_fail">授权失败，手机上没有安装微信</string>
+    <string name="toast_binding_fail">绑定失败，手机上没有安装微信</string>
+    <string name="toast_gold_not">金币不足，请继续努力，很快就可以提现啦</string>
+    <string name="toast_sign">退出登录后，将不能获得金币收益，你确定要退出?</string>
+    <string name="toast_sign_quit">退出登录</string>
+    <string name="toast_sign_continue">继续使用</string>
+    <string name="user_protocol">点击注册，表示你已阅读并同意</string>
+    <string name="user_proposal">请写下你的意见或建议（不超过250字）</string>
+    <string name="user_phone">填写你的手机号</string>
+    <string name="not_net">网络请求失败，请连网后重试</string>
+    <string name="active_center">活动公告</string>
+    <string name="active_notification">系统通知</string>
+    <string name="active_message">消息中心</string>
+    <string name="message">消息中心</string>
+    <string name="my_message">我的消息</string>
+
+    //弹幕 缓存id
+    <item name="tag_inner_entity" type="id"></item>
+
+    <!--播放器相关文案配置-->
+    <string name="player_error_network">呀，你的网络好像不太顺畅哦~~</string>
+    <string name="player_error_network_mobile">当前非WIFI状态，播放视频将产生数据流量</string>
+    <string name="player_error_load_failed">视频加载异常</string>
+
+    <string name="player_resume_play">继续播放</string>
+    <string name="player_retry">重试</string>
+    <string name="player_replay">重新播放</string>
+    <string name="player_next">下一个</string>
+
+    <!--极光推送dialog相关-->
+    <string name="dialog_jpush_title">温馨提示！</string>
+    <string name="dialog_jpush_message">关闭通知栏提示后，将不能收到到账通知与新闻推送，你确定要关闭？</string>
+    <string name="dialog_jpush_positive">考虑一下</string>
+    <string name="dialog_jpush_negative">立即关闭</string>
+
+    <!--登录注册界面-->
+    <string name="login_register_text">注册</string>
+    <string name="login_forget_text">找回密码</string>
+    <string name="login_other_text">其他登录方式</string>
+    <string name="forget_confirm_text">确认</string>
+
+    <!--新闻模块界面-->
+    <string name="news_settop">置顶</string>
+    <string name="news_title">标题</string>
+    <string name="news_writer">来源</string>
+    <string name="news_time">时间</string>
+    <string name="news_ad">广告</string>
+    <string name="ad">广告</string>
+</resources>

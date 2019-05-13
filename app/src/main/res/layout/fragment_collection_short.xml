@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlEnableLoadMoreWhenContentNotFull="false">
+
+    <com.dzkandian.common.widget.laoding.SmoothRefreshHeader
+        android:id="@+id/refreshHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlTextSizeTitle="@dimen/refresh_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/collection_short_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="visible"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:id="@+id/collection_short_errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/collection_short_tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                style="@style/style_error_text"/>
+
+            <Button
+                android:id="@+id/collection_short_btn"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_btn_click_shape"
+                android:visibility="gone"
+                android:text="去逛逛"
+                android:textColor="@color/color_text_white"
+                android:textSize="@dimen/t14" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:id="@+id/refreshFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlFinishDuration="0"
+        app:srlTextSizeTitle="@dimen/refresh_title" />
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

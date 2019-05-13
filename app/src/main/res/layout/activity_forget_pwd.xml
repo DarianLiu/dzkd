@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_top"
+        android:background="@color/colorPrimary" />
+
+    <include layout="@layout/include_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="22dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--输入手机号-->
+        <EditText
+            android:id="@+id/et_forget_phone"
+            style="@style/login_register_edit_phone"
+            android:layout_toStartOf="@+id/btn_forget_getcode"
+            android:background="@color/color_FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_forget_getcode"
+            style="@style/login_register_btn_captcha"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/color_FFFFFF" />
+
+    </RelativeLayout>
+
+    <View style="@style/login_line" />
+
+    <EditText
+        android:id="@+id/et_forget_code"
+        style="@style/login_register_edit_code"
+        android:background="@color/color_FFFFFF" />
+
+    <View style="@style/login_line" />
+
+    <EditText
+        android:id="@+id/et_forget_password"
+        style="@style/login_register_edit_pwd"
+        android:background="@color/color_FFFFFF"
+        android:hint="@string/hint_password_reg" />
+
+    <!--注册按钮-->
+    <Button
+        android:id="@+id/btn_forget"
+        style="@style/login_register_btn"
+        android:text="@string/btn_confirm" />
+
+</LinearLayout>

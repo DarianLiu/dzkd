@@ -1,0 +1,39 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/option_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="11dp"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/t16" />
+
+    <TextView
+        android:id="@+id/option_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/iv_next"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:maxWidth="230dp"
+        android:textColor="@color/color_text_tip"
+        android:textSize="@dimen/t14" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/icon_next"/>
+
+</merge>
